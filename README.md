@@ -1,2 +1,2 @@
 # lanParty
-proiect t PA
+proiect  PA
