@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "lanPartyLib.h"
+int main(int argc, char *argv[])
+{
+    int v[5];
+    FILE *inc = fopen(argv[1], "rt");
+    Node *head = NULL;
+    int numOfTeams;
+    int s = 0;
+    // citim c.in si salvam in numarul de 1
+    for (int i = 0; i < 5; i++)
+    {
+        fscanf(inc, "%d", &v[i]);
+        s = s + v[i];
+    }
+    fclose(inc);
+    if (s == 1)
+    {
+        createList(&head, &numOfTeams, argv);
+        printList(head, argv);
+    }
+    if (s == 2)
+    {
+        createList(&head, &numOfTeams, argv);
+        deleteTeams(&head, &numOfTeams);
+        printList(head, argv);
+    }
+    if (s == 3)
+    {
+        createList(&head, &numOfTeams, argv);
+        printList(head, argv);
+    }
+    return 0;
+}
