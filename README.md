@@ -1,2 +1,2 @@
-# lanParty
+#lanParty
 proiect  PA
